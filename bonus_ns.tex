@@ -1,55 +1,115 @@
 \documentclass[12pt,a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage[margin=2cm]{geometry}
 
-\newcommand\Z{\mathbb{Z}} 
-\newcommand\R{\mathbb{R}} 
-\newcommand\N{\mathbb{N}} 
-\newcommand\Q{\mathbb{Q}} 
-\newcommand\seq[1]{(#1 _{n})_{n=1}^{\infty}}
+\usepackage{mysty}
+\usepackage{mymaths}
 
 \begin{document}
-	\begingroup
-	Michaelmas 2019
-	\hspace*{\fill}
-	\textbf{Numbers and Sets - Bonus Problems}
-	\hspace*{\fill} Daniel Simms
-	\endgroup
-	
-	\vspace{0.3cm}
+\begingroup
+Michaelmas 2019
+\hspace*\fill
+\textbf{Numbers and Sets - Bonus Problems}
+\hspace*\fill Daniel Simms
+\endgroup
 
-	\begin{enumerate}
-		\item Let $A$ be the sum of the digits of $4444^{4444}$, and let $B$ be the sum of the digits of $A$. What is the sum of the digits of $B$?
-		\item Take $x,y,z \in \N$ satisfying $x^{2} + y^{2} + 1 = xyz$. Prove that $z=3$.
-		\item Let $p$ be a prime other than 7. Show that every integer is the sum of two cubes mod $p$.
-		\item Let $R$ be a rectangle which can be divided into smaller rectangles, each of which has at least one side of integer length. Prove that $R$ has at least one side of integer length.
-		\item Let $n, k \in \N$. Suppose that $n$ is a $k^{\text{th}}$  power (mod $p$) for all primes $p$. Must $n$ be a $k^{\text{th}}$ power?
-		\item There are 2019 dons, some pairs of whom are friends. Whenever don $A$ is friends with don $B$, don $B$ is friends with don $A$. Events of the following kind can happen, one at a time: if there are three dons $A,B,C$ such that don $A$ is friends with dons $B$ and $C$ but dons $B$ and $C$ aren't friends, don $A$ can introduce dons $B$ and $C$ to each other, at the cost of his friendships with dons $B$ and $C$. All other friendships are unchanged. Initially, 1010 dons have 1009 friends each, and 1009 dons have 1010 friends each. Prove that there is a sequence of such events after which each don is friends with at most one other don.
-		\item Let $n$ be a fixed positive integer. Show that, for a sufficiently large prime $p$ (i.e. for all but finitely many primes $p$), the equation $x^{n} + y ^{n} = z^{n}$ has a solution in $\Z_{p}$ with $x,y,z \neq 0$
-		\item There is an infinite sequence of boxes, each containing either a red or blue ball. Finitely many students each aim to guess the contents of some box. Each may examine the contents of any proper subset of the boxes, in any order, and (without sharing the gained information with the others) must then make a guess at the contents of a box they didn’t examine. How many students can guess correctly?
-		\item A pack of cards are shuffled and dealt out to you one card at a time. At any moment, based on what you have seen so far, you can say "I predict the next card will be red". (You can only make this prediction once). Which strategy gives you the best chance of being right?
-		\item The Bank of Trinity issues coins with an $H$ on one side and a $T$ on the other. Imre has $n$ of these coins arranged in a line from left to right. He repeatedly performs the following operation: if there are exactly $k > 0$ coins showing $H$, then he turns over the $k^{\text{th}}$ coin from the left; otherwise, all coins show $T$ and he stops.
-		\begin{enumerate}
-			\item Show that, for each initial configuration, Imre stops after a finite number of operations
-			\item For each initial configuration $C$, let $L(C)$ be the number of operations before Imre stops. For example $L(THT) = 3$ and $L(TTT)=0$. Determine the average value of $L(C)$ over all $2^{n}$ possible initial configurations $C$.
-		\end{enumerate}
-		\item Each of $n$ elderly dons knows a piece of gossip not known to any of the others. They com- municate by telephone, and in each call the two dons concerned reveal to each other all the information they know so far. What is the smallest number of calls that can be made in such a way that, at the end, all the dons know all the gossip?
-		\item When players participate in a tournament, each pair play a game, with one or other player winning (there are no draws). Construct a tournament in which, for any two players, there is a player who beats both of them. Is it true that for any $k$ there is a tournament in which, for any $k$ players, there is a player who beats all of them?
-		\item At each point in the plane, we place a 0 or a 1. Must there exist a square with sides parallel to the axes whose corners all have the same value?
-		\item Let $\seq{x}$ and $\seq{y}$ be a real sequences with $x_{n}, y_{n} \to 0$. Can we choose $\seq{\epsilon}$, with each $\epsilon_{n} = \pm 1$, such that $\sum_{n=1}^{\infty} \epsilon_{n} x_{n}$ and $\sum_{n=1}^{\infty} \epsilon_{n} y_{n}$ are convergent?
-		\item Let $S$ be a (possibly infinite) set of odd positive integers. Prove that there exists real sequence $\seq{x}$ such that, for each odd positive integer $k$, the series $\sum_{n=1}^{\infty} x_{n}^{k}$ converges when $k \in S$ and diverges when $k \not\in S$
-		\item Let $\seq{x}$ be a real sequence such that $\sum_{n=1}^{\infty} \lvert x_{n} \rvert$ is convergent. Show that if $\sum_{n=1}^{\infty} x_{kn} = 0$ for every $k \in \N$ then $x_n = 0$ for all $n$. What if we drop the restriction that $\sum_{n=1}^{\infty} \lvert x_{n} \rvert$ is convergent?
-		\item Let $f: \R^{2} \to \R$ be such that for every $x,y \in \R$, the functions $z \mapsto f(x,z)$ and $w \mapsto f(w,y)$ are polynomials. Prove that $f$ is a polynomial in $x$ and $y$. What if $\R$ is replaced with $\Q$?
-		\item Show that it is impossible to write the open interval $(0,1)$ as the disjoint union of a family of non-trivial closed intervals. Can the open square $(0,1)^{2}$ be written as the disjoint union of non-trivial closed straight-line segments?
-		\item If $A, B \in \mathbb{P} ( \N)$, we say that $A$ and $B$ are \textit{similar} if there exists a bijection there is a bijection $f: A \to B$ that preserves multiplication - that is $f(xy) = f(x)f(y)$ for all $x,y \in A$. (For example, the set of all positive integers and the set of square numbers are similar via $f(x) = x^{2}$). Among the three sets $A = \{1,3,5,7,\dots\}, B=\{1,4,7,10,13,16,\dots\}  \text{ and } C = \{1,5,9,13,17,21,\dots\}$  are any two similar?
-		\item Let $f : \N^{2} \to \N$ be a function. Does there always an infinite set $S \subset \N$ such that $f(S^{2})$ is \textbf{not} the whole of $\N$?
-		
-	
-		\end{enumerate}
-	
+\vspace{0.3cm}
+
+\begin{enumerate}
+ \item Let \(A\) be the sum of the digits of \(4444^{4444}\), and let \(B\) be
+       the sum of the digits of \(A\). What is the sum of the digits of \(B\)?
+ \item Take \(x, y, z \in \N\) satisfying \(x^2 + y^2 + 1 = xyz\). Prove that
+       \(z = 3\).
+ \item Let \(p\) be a prime other than 7. Show that every integer is the sum of
+       two cubes mod \(p\).
+ \item Let \(R\) be a rectangle which can be divided into smaller rectangles,
+       each of which has at least one side of integer length. Prove that \(R\)
+       has at least one side of integer length.
+ \item Let \(n, k \in \N\). Suppose that \(n\) is a \(k^{\mathrm{th}}\) power
+       (mod \(p\)) for all primes \(p\). Must \(n\) be a \(k^{\mathrm{th}}\)
+       power?
+ \item There are 2019 dons, some pairs of whom are friends. Whenever don \(A\)
+       is friends with don \(B\), don \(B\) is friends with don \(A\). Events of
+       the following kind can happen, one at a time: if there are three dons
+       \(A, B, C\) such that don \(A\) is friends with dons \(B\) and \(C\) but
+       dons \(B\) and \(C\) aren't friends, don \(A\) can introduce dons \(B\)
+       and \(C\) to each other, at the cost of his friendships with dons \(B\)
+       and \(C\). All other friendships are unchanged. Initially, 1010 dons have
+       1009 friends each, and 1009 dons have 1010 friends each. Prove that there
+       is a sequence of such events after which each don is friends with at most
+       one other don.
+ \item Let \(n\) be a fixed positive integer. Show that, for a sufficiently
+       large prime \(p\) (i.e. for all but finitely many primes \(p\)), the
+       equation \(x^n + y ^n = z^n\) has a solution in \(\Z_p\) with
+       \(x, y, z \ne 0\)
+ \item There is an infinite sequence of boxes, each containing either a red or
+       blue ball. Finitely many students each aim to guess the contents of some
+       box. Each may examine the contents of any proper subset of the boxes, in
+       any order, and (without sharing the gained information with the others)
+       must then make a guess at the contents of a box they didn’t examine. How
+       many students can guess correctly?
+ \item A pack of cards are shuffled and dealt out to you one card at a time. At
+       any moment, based on what you have seen so far, you can say "I predict
+       the next card will be red". (You can only make this prediction once).
+       Which strategy gives you the best chance of being right?
+ \item The Bank of Trinity issues coins with an \(H\) on one side and a \(T\) on
+       the other. Imre has \(n\) of these coins arranged in a line from left to
+       right. He repeatedly performs the following operation: if there are
+       exactly \(k > 0\) coins showing \(H\), then he turns over the
+       \(k^{\text{th}}\) coin from the left; otherwise, all coins show \(T\) and
+       he stops.
+  \begin{enumerate}
+   \item Show that, for each initial configuration, Imre stops after a finite
+         number of operations
+   \item For each initial configuration \(C\), let \(L(C)\) be the number of
+         operations before Imre stops. For example \(L(\mathit{THT}) = 3\) and
+         \(L(\mathit{TTT}) = 0\). Determine the average value of \(L(C)\) over
+         all \(2^n\) possible initial configurations \(C\).
+  \end{enumerate}
+ \item Each of \(n\) elderly dons knows a piece of gossip not known to any of
+       the others. They com- municate by telephone, and in each call the two
+       dons concerned reveal to each other all the information they know so far.
+       What is the smallest number of calls that can be made in such a way that,
+       at the end, all the dons know all the gossip?
+ \item When players participate in a tournament, each pair play a game, with one
+       or other player winning (there are no draws). Construct a tournament in
+       which, for any two players, there is a player who beats both of them. Is
+       it true that for any \(k\) there is a tournament in which, for any \(k\)
+       players, there is a player who beats all of them?
+ \item At each point in the plane, we place a 0 or a 1. Must there exist a
+       square with sides parallel to the axes whose corners all have the same
+       value?
+ \item Let \(\seq x\) and \(\seq y\) be a real sequences with
+       \(x_n, y_n \to 0\). Can we choose \(\seq \epsilon\), with each
+       \(\epsilon_n = \pm 1\), such that
+       \(\sum_{n = 1}^\infty \epsilon_n x_n\) and
+       \(\sum_{n = 1}^\infty \epsilon_n y_n\) are convergent?
+ \item Let \(S\) be a (possibly infinite) set of odd positive integers. Prove
+       that there exists real sequence \(\seq x\) such that, for each odd
+       positive integer \(k\), the series \(\sum_{n = 1}^\infty x_n^k\)
+       converges when \(k \in S\) and diverges when \(k \not\in S\)
+ \item Let \(\seq x\) be a real sequence such that
+       \(\sum_{n = 1}^\infty \abs{x_n}\) is convergent. Show that if
+       \(\sum_{n = 1}^\infty x_{kn} = 0\) for every \(k \in \N\) then
+       \(x_n = 0\) for all \(n\). What if we drop the restriction that
+       \(\sum_{n = 1}^\infty \abs{x_n}\) is convergent?
+ \item Let \(f: \R^2 \to \R\) be such that for every \(x, y \in \R\), the
+       functions \(z \mapsto f(x, z)\) and \(w \mapsto f(w, y)\) are
+       polynomials. Prove that \(f\) is a polynomial in \(x\) and \(y\). What if
+       \(\R\) is replaced with \(\Q\)?
+ \item Show that it is impossible to write the open interval
+       \(\intoo{0, 1}\) as the
+       disjoint union of a family of non-trivial closed intervals. Can the open
+       square \(\intoo{0, 1}^2\) be written as the disjoint union of non-trivial
+       closed straight-line segments?
+ \item If \(A, B \in \powerset(\N)\), we say that \(A\) and \(B\) are
+       \emph{similar} if there exists a bijection there is a bijection
+       \(f: A \to B\) that preserves multiplication - that is
+       \(f(xy) = f(x)f(y)\) for all \(x, y \in A\). (For example, the set of all
+       positive integers and the set of square numbers are similar via
+       \(f(x) = x^2\)). Among the three sets \(A = \set{1, 3, 5, 7, \dotsc}\),
+       \(B = \set{1, 4, 7, 10, 13, 16, \dotsc}\),
+       and \(C = \set{1, 5, 9, 13, 17, 21, \dotsc}\) are any two similar?
+ \item Let \(f : \N^2 \to \N\) be a function. Does there always an infinite
+       set \(S \subset \N\) such that \(f(S^2)\) is \textbf{not} the whole of
+       \(\N\)?
+\end{enumerate}
 \end{document}
